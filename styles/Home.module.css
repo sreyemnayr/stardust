@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 0;
 }
 
 .main {
@@ -12,14 +12,6 @@
   align-items: center;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
 
 .footer a {
   display: flex;
@@ -40,20 +32,17 @@
 }
 
 .title {
-  margin: 3rem 0;
+  
   line-height: 1;
   font-size: 2.5rem;
 }
 
-.title,
-.description {
+.title {
   text-align: center;
 }
 
 .description {
   margin: 0 0 2rem;
-  line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .grid {

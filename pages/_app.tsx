@@ -1,10 +1,17 @@
+import { josephinSansFont, tanSpringFont, loraFont } from '../assets/fonts/loader';
+import Head from 'next/head';
+
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
+
+
 import { RainbowKitProvider, getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
+import Nav from '../components/nav';
+
 
 const { chains, provider, webSocketProvider } = configureChains(
   [
@@ -20,7 +27,8 @@ const { chains, provider, webSocketProvider } = configureChains(
     alchemyProvider({
       // This is Alchemy's default API key.
       // You can get your own at https://dashboard.alchemyapi.io
-      apiKey: '_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC',
+      apiKey: 'AR57BGRCT9tsnGon_ulEC0nTx0o4zFc3',
+      
     }),
     publicProvider(),
   ]
@@ -42,6 +50,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
+      <style jsx global>{`
+        :root {
+          --font-josephin-sans: ${josephinSansFont.style.fontFamily};
+          --font-lora: ${loraFont.style.fontFamily};
+          --font-tan-spring: ${tanSpringFont.style.fontFamily};
+        }
+      `}</style>
+        <Nav />
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>

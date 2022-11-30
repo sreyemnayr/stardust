@@ -1,9 +1,30 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-josephin-sans);
+  
+  background-image: url('/img/bg.jpg');
+  background-size:cover;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-tan-spring);
+} 
+
+h1 {
+  font-size: 64pt;
+}
+h2 {
+  font-size: 48pt;
+}
+h3 {
+  font-size: 32pt;
 }
 
 a {
@@ -13,4 +34,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.purple-wave {
+  background-image: url('/img/purplewave.svg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+footer {
+  background-image: url('/img/footer-wave.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
 }
