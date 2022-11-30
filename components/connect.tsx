@@ -58,7 +58,8 @@ export const CustomConnectButton = () => {
                   onClick={openAccountModal}
                   src={account.ensAvatar || chain.iconUrl}
                   alt="My Wallet"
-                  className="flex h-10 invert-[.32] sepia-[.21] saturate-[3.133] hue-rotate-[276deg] brightness-[.93] contrast-[.89] rounded-full " />
+                  style={{filter: "invert(32%) sepia(21%) saturate(3133%) hue-rotate(276deg) brightness(93%) contrast(89%)"}}
+                  className="flex h-10 rounded-full " />
                    
                 
               );
