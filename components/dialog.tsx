@@ -68,30 +68,36 @@ const Modal= ({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full ring-8 ring-romantic-rose sm:max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <div className="flex items-center justify-center">
-                    <img alt={title} src={img} className="max-w-[14rem] max-h-[14rem] rounded-2xl" />
-                  <div className="m-0 sm:mx-12">
-                  <Dialog.Title
-                    as="h2"
-                    className="font-medium leading-none text-romantic-rose"
-                  >
-                    {title}
-                  </Dialog.Title>
-                  <Dialog.Title
-                    as="p"
-                    className="font-medium text-romantic-rose"
-                  >
-                    {subtitle}
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-black">
-                      {content}
-                    </p>
-                  </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center">
+                    <img alt={title} src={img} className="hidden sm:flex max-w-[14rem] max-h-[14rem] rounded-2xl" />
+                    <div className="m-0 sm:mx-12 flex flex-col items-center justify-center">
+                      <Dialog.Title
+                        as="h2"
+                        className="text-[12vw] sm:text-2xl font-medium leading-none text-romantic-rose"
+                      >
+                        {title}
+                      </Dialog.Title>
+                      <Dialog.Title
+                        as="p"
+                        className="font-medium text-romantic-rose"
+                      >
+                        <a href={socials ? socials[0]:''} target="_blank" rel="noreferrer"
+                        className="text-mazzy-star mr-2 focus:underline border-transparent focus:outline-none focus:border-transparent focus:ring-0"
+                      >
+                        @{socials ? socials[0].split('/').slice(-1)[0] : ''}, 
+                        </a>
+                        {subtitle}
+                      </Dialog.Title>
+                    <img alt={title} src={img} className="flex sm:hidden max-w-[14rem] max-h-[14rem] rounded-full" />
+                    <div className="mt-2">
+                      <p className="text-sm text-black">
+                        {content}
+                      </p>
+                    </div>
 
                   {socials && 
                   <>
-                    <p className="mt-3">
+                    <p className="hidden sm:flex mt-3">
                       Find me <a href={socials[0]} target="_blank" rel="noreferrer"
                         className="text-mazzy-star focus:underline border-transparent focus:outline-none focus:border-transparent focus:ring-0"
                       >
