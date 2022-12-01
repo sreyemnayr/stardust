@@ -7,6 +7,8 @@ import Link from 'next/link'
 
 import { SocialIcon } from 'react-social-icons'
 
+import Modal from '../components/dialog';
+
 import {BioProps} from '../interfaces'
 
 function classNames(...classes: string[]) {
@@ -39,7 +41,9 @@ function Bio({name, title, bio, socials, img, reverse = false, uppercaseName = t
         </div>
         <div className={classNames("flex-col w-[16rem] ", !reverse ? "order-first sm:pl-[4rem]" : "order-last sm:pr-[4rem]")}>
         <div className="flex items-center justify-center space-x-4 mt-2 sm:h-14 "></div>
-          <img alt={title} src={img} className="h-[12rem] rounded-full mx-auto"/>
+          <Modal title={name} subtitle={title} img={img} content={bio} socials={socials}>
+            <img alt={title} src={img} className="h-[12rem] ring-offset-2 rounded-full mx-auto hover:ring-3"/>
+          </Modal>
           <div className="hidden sm:flex items-center justify-center space-x-4 mt-1 h-14">
             {socials?.map((s) => (
               <SocialIcon key={`${name} ${s}`} url={s} bgColor="currentColor" fgColor={colors['moon-honey']} style={{height: "2rem", width: "2rem"}} className="text-romantic-rose rounded-full hover:ring-2 hover:ring-moon-honey hover:text-marquis-orange" />

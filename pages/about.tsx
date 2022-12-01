@@ -9,55 +9,14 @@ import { BioProps } from '../interfaces';
 import Bio from '../components/bio';
 import Footer from '../components/footer';
 
+import { copy } from '../assets/copy/about'
+
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const bios: BioProps[] = [
-  {
-    name:"coco",
-    title:"Founder & Artist",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0", "https://instagram.com/c0c0", "https://t.me/c0c0"],
-    img:"/img/Coco.png",
-  },
-  {
-    name:"Kali",
-    title:"CO-Founder",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0", "https://instagram.com/c0c0"],
-    img:"/img/Kali.png",
-  },
-  {
-    name:"Techchelle",
-    title:"Developer",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0"],
-    img:"/img/Michelle.png",
-  },
-  {
-    name:"Chels",
-    title:"Chief Spiritual Officer",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0", "https://instagram.com/c0c0", "https://t.me/c0c0"],
-    img:"/img/Chels.png",
-  },
-  {
-    name:"Maneisha",
-    title:"Financial Officer",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0", "https://instagram.com/c0c0", "https://t.me/c0c0"],
-    img:"/img/Maneisha.png",
-  },
-  {
-    name:"groupHUG #0002",
-    title:"Advisers",
-    bio:"Coco is the artist behind the sold out Stardust Society 1/1 collection and is excited about building a future for her community through Stardust Generation, a collection of 7777 dreamers circling the orbit. ",
-    socials:["https://twitter.com/c0c0", "https://instagram.com/c0c0", "https://t.me/c0c0"],
-    img:"/img/hug.png",
-    uppercaseName: false,
-  },
-]
+
 
 const About: NextPage = () => {
   return (
@@ -73,8 +32,8 @@ const About: NextPage = () => {
 
       <main className={styles.main}>
         <div className="text-nostalgia-perfume text-center max-w-[30rem]">
-          <h1 className="leading-none">About Us</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor.</p>
+        <h1 className="leading-none text-[12vw] sm:text-8xl">About Us</h1>
+        <p className="w-[60vw] sm:w-60rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor.</p>
           <div className="flex">
           <button type="submit" className="group mx-auto my-4 flex justify-center rounded-md border border-transparent bg-periwinkle-blue py-2 px-4 text-sm font-medium text-white hover:bg-romantic-rose focus:outline-none focus:ring-2 focus:ring-mazzy-star focus:ring-offset-2">
             Join our Discord
@@ -86,7 +45,7 @@ const About: NextPage = () => {
         </div>
 
         {/* This section is basically an InfoWave - still needs work */}
-        { bios.map((bio, i) => (
+        { copy.content.bios.map((bio, i) => (
           <Bio
             key={bio.name}
             {...bio}

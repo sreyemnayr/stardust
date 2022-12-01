@@ -8,10 +8,10 @@ import { OpenSeaIcon } from '../assets/icons/icons'
 function Footer() {
   
   return (
-    <footer className="h-72 pt-32 px-5 flex justify-between items-center">
-        <img src="/img/logo.png" className="hidden sm:block h-32" alt="Stardust Society" />
-        <img src="/img/madeofstardust.png" className="hidden sm:block h-14 mt-6" alt="We are all made of stardust" />
-        <div className="h-10 flex space-x-4">
+    <footer className="h-36 sm:h-72 pt-12 sm:pt-32 px-5 flex justify-between items-center">
+        <img src="/img/logo.png" className="hidden sm:block h-32 mx-auto" alt="Stardust Society" />
+        <img src="/img/madeofstardust.png" className="hidden sm:block h-14 mt-6 mx-auto" alt="We are all made of stardust" />
+        <div className="h-10 flex space-x-4 mx-auto">
           
           <SocialIcon url="https://twitter.com/stardust7inc" style={{height: "2rem", width: "2rem"}} bgColor="currentColor" fgColor={colors['moon-honey']} className="text-romantic-rose rounded-full hover:ring-2 hover:ring-moon-honey hover:text-marquis-orange" />
           <SocialIcon url="https://instagram.com/stardust7inc" style={{height: "2rem", width: "2rem"}} bgColor="currentColor" fgColor={colors['moon-honey']} className="text-romantic-rose rounded-full hover:ring-2 hover:ring-moon-honey hover:text-marquis-orange"  />

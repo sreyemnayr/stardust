@@ -9,8 +9,21 @@ body {
   margin: 0;
   font-family: var(--font-josephin-sans);
   
-  background-image: url('/img/bg.jpg');
-  background-size:cover;
+  background-position: 50% 0%;
+  background-size:auto 100%;
+}
+
+@media (min-width:641px) {
+  body {
+    background-image: url('/img/bg.jpg');
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background-size:100% auto;
+    background-image: url('/img/mobilebg.png');
+  }
 }
 
 h1, h2, h3 {
@@ -34,6 +47,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+.social-icon:focus{
+  outline: solid;
 }
 
 .purple-wave {

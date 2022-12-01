@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { josephinSansFont, tanSpringFont, loraFont } from '../assets/fonts/loader';
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import Link from 'next/link'
-import { Bars3Icon, BellIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import LinkButton from '../components/linkbutton'
 
 interface ContentProps {
   title: string;
@@ -14,42 +10,53 @@ interface ContentProps {
   img?: string;
   reverse?: boolean;
   bg?: string;
-  titleColor?: string;
+  titleClass?: string;
 }
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Content({title, description, button, img, reverse = false, bg = "purple-wave", titleColor = "romantic-rose"} : ContentProps) {
+function Content({title, description, button, img, reverse = false, bg = "purple-wave", titleClass = "text-romantic-rose"} : ContentProps) {
   const signedIn = false;
   return (
-    <div className={classNames(bg, "w-full ", bg.includes("wave") ? "h-[36rem] items-center" : "", "items-top flex")}>
+    <div className={
+      classNames(bg,
+        "w-full ",
+        bg.includes("wave") ? "bg-left sm:bg-top h-[36rem] items-center" : "mb-24",
+        "items-top flex")}
+    >
       <div className={classNames(
-        "info flex w-[60rem] justify-between", bg.includes("wave") ? "h-[24rem] items-center" : "items-top", " mx-auto",
+        "info flex flex-col sm:flex-row w-[90vw] sm:w-[60rem] justify-evenly justify-between", bg.includes("wave") ? "h-[24rem] items-center" : "items-top", " mx-auto",
         
       )}>
         <div className={classNames(
-          "infoText w-[28rem]",
-          "justify-items-start flex-col",
-          reverse ? "order-last ml-[6rem]" : "mr-[6rem]"
+          "infoText sm:w-[28rem]",
+          "justify-items-start flex-col order-last",
+          reverse ? "sm:ml-[6rem]" : "sm:order-first sm:mr-[6rem]"
         )}>
         <h3 className={classNames(
-          `text-${titleColor}`,
-          'mb-3 text-left',
+          titleClass,
+          'mb-3 text-left font-bold sm:font-normal text-[8vw] sm:text-4xl',
           )}>
           {title}
         </h3>
         { description.split('\n').map((d, i)=> (
-          <p className='my-2 leading-relaxed' key={`${title} ${i}`} >
+          <p className={classNames(
+            'my-2 leading-relaxed', 
+            bg.includes("wave") ? 'text-black' : 'text-moon-honey'
+            )} key={`${title} ${i}`} >
             {d}
           </p>
         ))}
         
-        {button}
+        <LinkButton {...button} />
       
         </div>
-        <img alt={title} src={img} className="h-[22rem]"/>
+        <img alt={title} src={img} className={classNames(
+          "w-[60vw] sm:w-[24rem] self-center",
+          bg.includes("wave") ? "hidden sm:block" : "block"
+          )} />
       </div>
     </div>
   )
