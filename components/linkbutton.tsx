@@ -5,31 +5,24 @@ import { colors } from '../assets/colors'
 
 import Link from 'next/link'
 
-interface LinkButtonProps {
-  title: string;
-  href: string;
-  textClass?: string;
-  bgClass?: string;
-  hoverClass?: string;
-  focusClass?: string;
-}
+import {LinkButtonProps} from '../interfaces'
 
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-function LinkButton({title, href, textClass = "text-moon-honey", bgClass = "bg-mazzy-star", hoverClass = "hover:ring-romantic-rose", focusClass = "focus:ring-romantic-rose"} : LinkButtonProps) {
+function LinkButton({title, href, textClass = "text-moon-honey", bgClass = "bg-mazzy-star", hoverClass = "hover:bg-romantic-rose", focusClass = "focus:ring-romantic-rose", icon = ""} : LinkButtonProps) {
   return (
     <Link href={href} className={classNames(
-      " inline-block my-4 rounded-md border border-transparent ",
+      " inline-flex my-4 rounded-md border border-transparent justify-between items-center",
       textClass,
       bgClass,
       hoverClass,
       focusClass,
       "py-3 px-4 text-sm font-medium focus:ring-2 focus:ring-offset-2"
       )}>
-      {title}
+      {title}{icon}
     </Link>
   )
 }

@@ -6,6 +6,7 @@ import { colors } from '../assets/colors'
 
 import { SocialIcon } from 'react-social-icons'
 import { OpenSeaIcon } from '../assets/icons/icons'
+import LinkButton from './linkbutton'
 
 type Props = {
   title: string,
@@ -67,13 +68,13 @@ const Modal= ({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full ring-8 ring-romantic-rose sm:max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full ring-8 ring-mazzy-star sm:max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <div className="flex flex-col sm:flex-row items-center justify-center">
                     <img alt={title} src={img} className="hidden sm:flex max-w-[14rem] max-h-[14rem] rounded-2xl" />
                     <div className="m-0 sm:mx-12 flex flex-col items-center justify-center">
                       <Dialog.Title
                         as="h2"
-                        className="text-[12vw] sm:text-2xl font-medium leading-none text-romantic-rose"
+                        className="text-[12vw] text-center sm:text-2xl font-medium leading-none text-romantic-rose"
                       >
                         {title}
                       </Dialog.Title>
@@ -81,14 +82,16 @@ const Modal= ({
                         as="p"
                         className="font-medium text-romantic-rose"
                       >
+                        {socials && 
                         <a href={socials ? socials[0]:''} target="_blank" rel="noreferrer"
                         className="text-mazzy-star mr-2 focus:underline border-transparent focus:outline-none focus:border-transparent focus:ring-0"
-                      >
+                        >
                         @{socials ? socials[0].split('/').slice(-1)[0] : ''}, 
                         </a>
+                        }
                         {subtitle}
                       </Dialog.Title>
-                    <img alt={title} src={img} className="flex sm:hidden max-w-[14rem] max-h-[14rem] rounded-full" />
+                    <img alt={title} src={img} className="flex sm:hidden max-w-[60vw] max-h-[60vh] rounded-full" />
                     <div className="mt-2">
                       <p className="text-sm text-black">
                         {content}
@@ -110,6 +113,9 @@ const Modal= ({
                       ))}
                     </div>
                     </>
+                  }
+                  {button && 
+                    <LinkButton {...button} />
                   }
                   
                   </div>

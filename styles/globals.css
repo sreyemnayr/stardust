@@ -8,13 +8,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-josephin-sans);
-  
+  background-color: #c96028;
   background-position: 50% 0%;
-  background-size:auto 100%;
+  
 }
 
 @media (min-width:641px) {
   body {
+    background-size: 100% auto;
     background-image: url('/img/bg.jpg');
   }
 }
@@ -63,6 +64,14 @@ a {
   background-repeat: no-repeat;
   
 }
+
+.purple-wave-trans {
+  background-image: url('/img/purplewave_trans.svg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  
+}
+
 
 footer {
   background-image: url('/img/footer-wave.png');

@@ -22,7 +22,7 @@ export const copy = {
         name:"Kali",
         title:"CO-Founder",
         bio:"An award-winning Creative Director by day, a web3 taskmaster by night. ",
-        socials:["https://twitter.com/kali", "https://instagram.com/c0c0"],
+        socials:["https://twitter.com/youthquake", "https://instagram.com/c0c0"],
         img:"/img/Kali.png",
       },
       {
@@ -36,7 +36,7 @@ export const copy = {
         name:"Chels",
         title:"Chief Spiritual Officer",
         bio:"An artist in her own right, Chels is also a Holistic Intuitive Mentor and Coach as well as a Spaces Host.",
-        socials:["https://twitter.com/chels", "https://instagram.com/c0c0", "https://t.me/c0c0"],
+        socials:["https://twitter.com/chels_vibe", "https://instagram.com/c0c0", "https://t.me/c0c0"],
         img:"/img/Chels.png",
       },
       {

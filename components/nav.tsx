@@ -18,37 +18,51 @@ function classNames(...classes: string[]) {
 const navigation: NavPage[] = [
   {
     label: "About",
-    slug: "about",
+    slug: "/about",
   },
   {
     label: "Collections",
-    slug: "collections",
+    slug: "/collections",
     sublinks: [
       {
         label: "Stardust Generation",
-        slug: "collections/stardust-generation",
+        slug: "/collections/stardust-generation",
       },
       {
         label: "Space Cadets",
-        slug: "collections/space-cadets",
+        slug: "/collections/space-cadets",
       },
       {
         label: "Derividust",
-        slug: "collections/derividust",
+        slug: "/collections/derividust",
       },
     ],
   },
   {
     label: "Space Station",
-    slug: "space-station",
+    slug: "/space-station",
   },
   {
     label: "Community",
-    slug: "community",
+    slug: "/community",
+    sublinks: [
+      {
+        label: "Service Projects",
+        slug: "/community/service",
+      },
+      {
+        label: "Community Giveback",
+        slug: "/community/giveback",
+      },
+      {
+        label: "NFT Giveback Gallery",
+        slug: "/community/gallery",
+      },
+    ],
   },
   {
     label: "Contact",
-    slug: "about",
+    slug: "/contact",
   },
 ]
 

@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         {/* Content section */}
 
         {/* Primary section */}
-        <Content {...copy.content.primary} />
+        <Content {...copy.content.primary} hideImgMobile />
         { copy.content.secondary.map(sc => (
             <Content key={sc.title} {...sc} />
         ))}

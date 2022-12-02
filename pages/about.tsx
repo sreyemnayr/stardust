@@ -31,10 +31,10 @@ const About: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className="text-nostalgia-perfume text-center max-w-[30rem]">
+        <div className="text-nostalgia-perfume flex flex-col text-center justify-center items-center max-w-[30rem]">
         <h1 className="leading-none text-[12vw] sm:text-8xl">About Us</h1>
         <p className="w-[60vw] sm:w-60rem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor.</p>
-          <div className="flex">
+          <div className="flex space-x-3">
           <button type="submit" className="group mx-auto my-4 flex justify-center rounded-md border border-transparent bg-periwinkle-blue py-2 px-4 text-sm font-medium text-white hover:bg-romantic-rose focus:outline-none focus:ring-2 focus:ring-mazzy-star focus:ring-offset-2">
             Join our Discord
           </button>
