@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
       <div className="text-nostalgia-perfume flex flex-col text-center justify-center items-center max-w-[30rem]">
-        {copy.hero?.img && <img className="w-[20vw] sm:w-[10rem]" src={copy.hero.img} alt={copy.hero.title} /> }
+        {/*copy.hero?.img && <img className="w-[20vw] sm:w-[10rem]" src={copy.hero.img} alt={copy.hero.title} /> */}
         <h1 className="leading-none text-[12vw] sm:text-8xl">{copy.hero.title}</h1>
         <p className="w-[60vw] sm:w-60rem">{copy.hero.subtitle}</p>
           <div className="flex space-x-3">
